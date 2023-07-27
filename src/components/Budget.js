@@ -15,9 +15,11 @@ const Budget = () => {
   };
 
   const handleBudgetSave = () => {
+    const updatedBudget = parseInt(editableBudget) + 10;
+    setEditableBudget(updatedBudget);
     dispatch({
       type: 'SET_BUDGET',
-      payload: parseInt(editableBudget),
+      payload: updatedBudget,
     });
   };
 
@@ -39,4 +41,7 @@ const Budget = () => {
 };
 
 export default Budget;
+
+
+
 
